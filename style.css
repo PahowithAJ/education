@@ -1,0 +1,529 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: black;
+
+}
+li{
+    list-style: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    z-index: 5;
+}
+.nav-branding{
+    font-size: 32px;
+    font-weight: 900    ;
+    z-index: 5;
+}
+.nav-item{
+    transition: 0.7s ease;
+
+    padding: 10px 30px;
+    border-radius: 50px;
+
+}
+.nav-item:hover{
+    background-color: royalblue;
+}
+.nav-link{
+    text-transform: capitalize;
+}
+.nav-link:nth-first-child(){
+    margin-top: 100px;
+}
+.hamburger{
+    display: none;
+    z-index: 5;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+}
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+}
+
+.front{
+    width: 100%;
+    height: 100%;
+    margin-top: -89px;
+}
+.fronttext{
+    text-align: center;
+    margin-top: -200px;
+    margin-bottom: 150px;
+    gap: 20px;
+}
+.fronttext .clickme{
+    border-radius: 50px;
+    margin-top: -89px;
+    font-size: 30px;
+    text-transform: capitalize;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+.intro{
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+    width: 80%;
+}
+.clickme:hover{
+    background-color: royalblue;
+    color: white;
+    border: none;
+    box-shadow: 0px 0px 10px aqua,
+    0px 0px 20px aqua,
+    0px 0px 30px aqua,
+    0px 0px 40px aqua;
+}
+.intro1{
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 50px 0px 20px 0px;
+}
+.intro2{
+    text-align: center;
+    margin: 0px 0px 50px 0px;
+    font-size: 25px;
+    padding: 20px;
+}
+.teacherbox{
+    display: flex;
+    border: 2px solid black;
+    box-shadow: 0px 0px 10px black,
+    0px 0px 10px black,
+    0px 0px 10px black,
+    0px 0px 10px black,
+    0px 0px 10px black;
+    background: lightgrey;
+    align-items: center;
+    margin: 0px 20px;
+    padding: 5px 10px;
+    gap: 20px;
+    border-radius: 20px;
+}
+.teacherpic{
+    width: 50%;
+    height: 100%;
+    box-shadow: 0px 0px 10px white,
+    0px 0px 10px white,
+    0px 0px 10px white,
+    0px 0px 10px white,
+    0px 0px 10px white;
+    border-radius: 10px;
+    
+}
+.teacherintro{
+    box-shadow: 0px 0px 10px white,
+    0px 0px 10px white,
+    0px 0px 10px white,
+    0px 0px 10px white,
+    0px 0px 10px white;
+    margin: 10px;
+    padding: 0px 40px;
+    height: 490px;
+    border-radius: 10px;
+    line-height: 300%;
+}
+.teacherintro h1{
+    margin: 20px 0px 0px 0px;
+    font-size: 50px;
+    text-align: center;
+}
+.teacherintro p{
+    font-size: 25px;
+}
+
+
+.ourachievments{
+    font-size: 50px;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    margin: 50px 0px 50px 0px;
+}
+.achievments{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0px 30px;
+    justify-content: space-between;
+}
+.achievments1 a{
+    font-size: 50px;
+    color: black;
+    border: 2px solid lightseagreen;
+    padding: 10px;
+    border-radius: 20px;
+}
+.achievments1 h1{
+    text-transform: capitalize;
+}
+.ourcourses{
+    font-size: 50px;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+.aboutsection{
+    display: flex;
+    gap: 20px;
+}
+
+.aboutbox{
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;  
+    transition:1s ease-in-out;
+}
+.aboutbox:hover{
+padding: 20px;  
+}
+.aboutbox .pic{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ;
+    transition:1s ease-in-out;
+    text-align: center;
+}
+
+.text{
+    color: white;
+    position: relative;
+    padding: 10px;
+    transition: 0.50s;
+    line-height: 20px;
+    width: 95%;
+    height: 100%;
+}
+.aboutbox:hover .text{
+    margin-top: -350px;
+    background-color: transparent;
+    color: white;
+}
+.header{
+text-align: center;
+}
+.title{
+    font-size: 30px;
+    text-decoration: underline;
+    padding: 20px;
+}
+.fullform{
+    font-size: 20px;
+}
+.icons{
+    font-size: 30px;
+    color: white;
+    padding: 0px 20px;
+}
+
+.parents{
+    font-size: 50px;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    margin: 50px 0px 80px 0px;
+}
+.parentsbox{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0px 30px;
+    justify-content: space-between;
+}
+.parents1 img{
+    border: 2px solid lightseagreen;
+    padding: 10px;
+    border-radius: 20px;
+    width: 20%;
+}
+.parents1 h1{
+    text-transform: capitalize;
+}
+.footerbox{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0px 0px 0px;
+    padding: 20px 20px;
+    line-height: 30px;
+    background-color: royalblue;
+    color: #fff;
+}
+.firstline h1{
+    text-transform: capitalize;
+}
+.firstline p{
+    color: black;
+    font-size: 20px;
+    color: #fff;
+
+}
+.secondline h1{
+    text-transform: capitalize;
+}
+.secondline a{
+    text-decoration: none;
+    color: black;
+    color: #fff;
+    font-size: 20px;
+}
+
+.thirdline h1{
+    text-transform: capitalize;
+}
+.thirdline a{
+    text-decoration: none;
+    color: black;
+    color: #fff;
+    font-size: 20px;
+
+}
+.fourthline h1{
+    text-transform: capitalize;
+}
+.fourthline address{
+    font-size: 20px;
+}
+.fourthline a{
+    text-decoration: none;
+    color: black;
+    color: #fff;
+    font-size: 20px;
+
+}
+.copyright{
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1245px) {
+ .front{
+    height: 80%;
+ }
+ .fronttext{
+    margin: 0;
+ }
+ .intro{
+    font-size: 20px;
+    margin-top: -150;
+    width: 90%;
+ }
+ .clickme{
+    font-size: 20px;
+ }
+ .teacherbox{
+    flex-direction: column;
+ }
+ .teacherpic{
+    width: 100%;
+ }
+ .teacherintro{
+    overflow: scroll;
+    scroll-behavior: smooth;
+ }
+ .achievments{
+    flex-direction: column;
+    gap: 30px;
+ }
+ .aboutsection{
+    flex-direction: column;
+ }
+ .aboutbox:hover .text{
+    margin-top: -300px;
+
+ }
+ .parentsbox{
+    flex-direction: column;
+    gap: 30px;
+ }
+ .footerbox{
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+ }
+}
+@media screen and (min-device-width: 481px) and (max-device-width: 768px){
+    .front{
+        height: 80%;
+     }
+     .fronttext{
+        margin: 0;
+     }
+     .intro{
+        font-size: 20px;
+        margin-top: -150;
+        width: 90%;
+     }
+     .clickme{
+        font-size: 20px;
+     }
+     .teacherbox{
+        flex-direction: column;
+     }
+     .teacherpic{
+        width: 100%;
+     }
+     .teacherintro{
+        overflow: scroll;
+        scroll-behavior: smooth;
+     }
+     .achievments{
+        flex-direction: column;
+        gap: 30px;
+     }
+     .aboutsection{
+        flex-direction: column;
+     }
+     .aboutbox:hover .text{
+        margin-top: -300px;
+    
+     }
+     .icons{
+        padding: 0 10;
+     }
+     .parentsbox{
+        flex-direction: column;
+        gap: 30px;
+     }
+     .footerbox{
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+     }
+     .aboutbox:hover .text{
+        margin-top: -330px;
+    }  
+    .ourachievments{
+        font-size: 40px;
+    }
+    .ourcourses{
+        font-size: 40px;
+    }
+    .parents{
+        font-size: 40px;
+    }
+
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 480px){
+    .front{
+        height: 50%;
+     }
+     .fronttext{
+        margin: 0;
+     }
+     .intro{
+        font-size: 15px;
+        margin-top: -90;
+        width: 90%;
+     }
+     .fronttext .clickme{
+        font-size: 15px;
+        margin-top: -50;
+        font-weight: 900;
+     }
+     .teacherbox{
+        flex-direction: column;
+     }
+     .teacherpic{
+        width: 100%;
+     }
+     .teacherintro{
+        overflow: scroll;
+        scroll-behavior: smooth;
+     }
+     .achievments{
+        flex-direction: column;
+        gap: 30px;
+     }
+     .aboutsection{
+        flex-direction: column;
+     }
+     .aboutbox:hover .text{
+        margin-top: -300px;
+    
+     }
+     .icons{
+        padding: 0 10;
+     }
+     .parentsbox{
+        flex-direction: column;
+        gap: 30px;
+     }
+     .footerbox{
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+     }
+     .aboutbox:hover .text{
+        margin-top: -330px;
+    }
+    .ourachievments{
+        font-size: 30px;
+    }
+    .ourcourses{
+        font-size: 30px;
+    }
+    .parents{
+        font-size: 30px;
+    }
+}
